@@ -51,6 +51,11 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+# INTERNAL_IPS = [
+#     '127.0.0.1',
+# ]
+
+
 ROOT_URLCONF = 'storefront.urls'
 
 TEMPLATES = [
@@ -77,8 +82,11 @@ WSGI_APPLICATION = 'storefront.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'storefront_db',
+        'HOST': 'localhost',
+        'USER': 'root',
+        'PASSWORD': 'Hooyo@123'
     }
 }
 
